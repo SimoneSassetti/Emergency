@@ -6,7 +6,9 @@ public class Patient {
 	
 	private String name ;
 	private PatientStatus status ;
-	private int queueTime ;
+	private int queueTime ; //si ricorda quando il paziente è entrato nella lista per permettere il confronto nella coda di priorita
+	//lista di attesa->il paziente non sa quando uscirà da tale lista xk dipende dagli altri pazienti si trova in lista quando ha assegnato un colore
+	//consideriamo la gravità e a parita di gravita dal tempo di attesa
 	
 	public Patient(String name) {
 		super();

@@ -8,7 +8,7 @@ public class Event implements Comparable<Event> {
 		FREE_STUDIO // a patient exits from the studio and a new one is called
 		} ;
 		
-	private Patient patient ;
+	private Patient patient ;//mi salvo di quale paziente stiamo trattando
 	private int time ;
 	private EventType type ;
 	

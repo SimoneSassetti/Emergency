@@ -15,7 +15,8 @@ public class PatientComparator implements Comparator<Patient> {
 	public int compare(Patient o1, Patient o2) {
 		Patient.PatientStatus s1 = o1.getStatus();
 		Patient.PatientStatus s2 = o2.getStatus();
-
+		
+		//questo gestisce l'eccezione nel caso in cui c'e un paziente senza stato
 		if ((s1 != Patient.PatientStatus.WHITE) && (s1 != Patient.PatientStatus.YELLOW)
 				&& (s1 != Patient.PatientStatus.RED))
 			throw new IllegalArgumentException(
@@ -33,9 +34,9 @@ public class PatientComparator implements Comparator<Patient> {
 			return -1 ;
 		} else if(s2==Patient.PatientStatus.RED) {
 			return +1 ;
-		} else if(s1==Patient.PatientStatus.YELLOW) {
+		} else if(s1==Patient.PatientStatus.YELLOW) {//s2 è per forza white a questo punto
 			return -1 ;
-		} else if(s2==Patient.PatientStatus.YELLOW) {
+		} else if(s2==Patient.PatientStatus.YELLOW) {//s1 è per forza white
 			return +1 ;
 		} else {
 			throw new InternalError("Something wrong "+o1.toString()+o2.toString()) ;

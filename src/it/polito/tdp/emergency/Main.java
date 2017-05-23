@@ -6,7 +6,7 @@ import it.polito.tdp.emergency.model.Simulator;
 public class Main {
 
 	public static void main(String[] args) {
-		Simulator sim = new Simulator(3) ;
+		Simulator sim = new Simulator(15) ;
 		
 		for(int i=0; i<50; i++) {
 			Patient p = new Patient("Pat"+String.valueOf(i)) ;
